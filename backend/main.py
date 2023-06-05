@@ -53,26 +53,17 @@ async def check_health():
 
 
 
-<<<<<<< HEAD
 # post bot response
 @app.post("/post-audio")
 async def post_audio(file: UploadFile=File(...)):
 
-    # Get saved audio 
-    audio_input = open("voice.mp3", "rb")
+    # # Get saved audio 
+    # audio_input = open("voice.mp3", "rb")
 
-    # # Save file from frontend
-    # with open(file.filename, "wb") as buffer:
-    #     buffer.write(file.file.read())
-    # audio_input = open(file.filename, "rb")
-=======
-# get bot response
-@app.get("/get-audio/")
-async def get_audio():
-
-    # Get saved audio 
-    audio_input = open("voice.mp3", "rb")
->>>>>>> parent of 4a3faa8 (done)
+    # Save file from frontend
+    with open(file.filename, "wb") as buffer:
+        buffer.write(file.file.read())
+    audio_input = open(file.filename, "rb")
 
     # Decode Audio 
     message_decoded = convert_audio_to_text(audio_input)
