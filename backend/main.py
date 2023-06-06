@@ -9,9 +9,9 @@ import openai
 
 
 # Custom Functions IMports
-from functions.database import store_messages, reset_messages
-from functions.openai_requests import convert_audio_to_text, get_chat_response
-from functions.text_to_speech import conver_text_to_speech
+from backend.functions.database import store_messages, reset_messages
+from backend.functions.openai_requests import convert_audio_to_text, get_chat_response
+from backend.functions.text_to_speech import conver_text_to_speech
 
 
 # Initiate APP
