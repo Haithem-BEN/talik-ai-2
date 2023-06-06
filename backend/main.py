@@ -44,10 +44,16 @@ app.add_middleware(
 async def check_health():
     return {"message": "healthy"}
 
+
+# Check Health 
+@app.get("/")
+async def main_path():
+    return {"message": "API Works"}
+
     
 # Check Health 
 @app.get("/reset_messages")
-async def check_health():
+async def reset_messages_api():
     reset_messages()
     return {"message": "conversations reseted"}
 
