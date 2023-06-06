@@ -2,7 +2,7 @@ import openai
 from decouple import config
 
 # Custom Functions Imports 
-from functions.database import get_recent_messages
+from backend.functions.database import get_recent_messages
 
 
 # Get env vars
